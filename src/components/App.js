@@ -40,7 +40,14 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+        <ul>
+          {this.cityList.filter(city => {
+            return city.country == "India";
+          })
+          .map((city, index) => {
+            return <li key={"location"+index}> {city.name} </li>;
+        })}
+        </ul>
       </div>
     )
   }
