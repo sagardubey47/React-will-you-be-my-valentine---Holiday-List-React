@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import '../styles/App.css';
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <ul>
+        
           {
             this.cityList.filter(city => {
             return city.country == "India";
@@ -53,15 +53,8 @@ class App extends Component {
             return <li key={"location"+index}> {city.name} </li>;
         })
         }
-        {
-            this.cityList.filter(city => {
-            return city.country != "India";
-          })
-          .map((city, index) => {
-            return <li key={"location"+(index+this.count)}> {city.name} </li>;
-        })
-        }
-        </ul>
+        
+        
       </div>
     )
   }
